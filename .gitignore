@@ -1,0 +1,10 @@
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+
+# Frontend (będzie dodane później)
+frontend/node_modules/
+frontend/dist/

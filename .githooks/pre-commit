@@ -1,0 +1,17 @@
+#!/bin/sh
+set -e
+
+ROOT=$(git rev-parse --show-toplevel)
+
+echo ">>> PHPStan..."
+cd "$ROOT/backend"
+./vendor/bin/phpstan analyse --memory-limit=512M
+
+echo ">>> Backend test..."
+php artisan test
+
+echo ">>> Build frontend..."
+cd "$ROOT/frontend"
+npm run build
+
+echo ">>> OK"

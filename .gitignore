@@ -1,10 +1,21 @@
-# IDE
-.idea/
-.vscode/
-
 # OS
 .DS_Store
+Thumbs.db
 
-# Frontend (będzie dodane później)
+# IDEs
+.idea/
+.vscode/
+.zed/
+
+# Backend — szczegóły w backend/.gitignore
+backend/.env
+backend/.env.*
+backend/vendor/
+backend/node_modules/
+backend/public/build/
+backend/storage/logs/
+backend/storage/*.key
+
+# Frontend
 frontend/node_modules/
 frontend/dist/

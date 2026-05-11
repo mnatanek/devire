@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Models\Patient;
 use App\Models\User;
 
 return [
@@ -44,6 +45,10 @@ return [
             'driver'   => 'session',
             'provider' => 'users',
         ],
+        'api' => [
+            'driver'   => 'jwt',
+            'provider' => 'patients',
+        ],
     ],
 
     /*
@@ -64,9 +69,13 @@ return [
     */
 
     'providers'        => [
-        'users' => [
+        'users'    => [
             'driver' => 'eloquent',
             'model'  => env('AUTH_MODEL', User::class),
+        ],
+        'patients' => [
+            'driver' => 'eloquent',
+            'model'  => Patient::class,
         ],
 
         // 'users' => [

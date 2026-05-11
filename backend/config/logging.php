@@ -60,6 +60,13 @@ return [
             'ignore_exceptions' => false,
         ],
 
+        'import'     => [
+            'driver'               => 'single',
+            'path'                 => storage_path('logs/import.log'),
+            'level'                => 'debug',
+            'replace_placeholders' => true,
+        ],
+
         'single'     => [
             'driver'               => 'single',
             'path'                 => storage_path('logs/laravel.log'),
